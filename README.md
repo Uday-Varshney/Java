@@ -1,1 +1,37 @@
 #JAVA
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner sc=new Scanner(System.in);
+        String A=sc.next();
+        String B=sc.next();
+        int sum=A.length()+B.length();
+        char c=A.charAt(0);
+        char c1=B.charAt(0);
+        System.out.println(sum);
+        if(c<c1)
+        {
+            System.out.println("No");
+        }
+        else
+        {
+            System.out.println("Yes");
+        }
+        String s=(A+' '+B);
+        String upperCase=" ";
+        Scanner scaner=new Scanner(s);
+        while(scaner.hasNext())
+        {
+            String word=scaner.next();
+            upperCase+=Character.toUpperCase(word.charAt(0))+word.substring(1)+" ";
+        }
+         System.out.println(upperCase.trim());
+    }
+}
+
+
+
