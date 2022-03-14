@@ -1,16 +1,16 @@
 class selectionsort{
     public void sort(int arr[]){
-        int j=0,temp;
-        int n=arr.length;
-        for(int i=0;i<n-1;i++){
+        int temp;
+        for(int i=0;i<arr.length-1;i++){
             int min=i;
-            for(j=i+1;j<n;j++){
-                if(arr[j]<arr[min]){
-                temp=arr[j];
-                arr[j]=arr[min];
-                arr[min]=temp;
+            for(int j=i+1;j<arr.length;j++){
+                if(arr[min]>arr[j]){
+                min=j;
                 }
             }
+            temp=arr[min];
+            arr[min]=arr[i];
+            arr[i]=temp;
         }
     }
     public static void main(String args[]){
